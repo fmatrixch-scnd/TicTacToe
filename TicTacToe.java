@@ -44,7 +44,7 @@ public class TicTacToe {
                 System.out.println();
             }
             result = ga.judge(chequerboard,move_count);
-            if (result == WIN || result == TIE){
+            if (result != NORMAL){
                 return result;
             }
             System.out.print("Select your place (opposite, 1-9): ");
@@ -59,6 +59,9 @@ public class TicTacToe {
                 }
             }
             result = ga.judge(chequerboard,move_count);
+            if (result != NORMAL){
+                return result;
+            }
         }
     }
     public static int fun() {

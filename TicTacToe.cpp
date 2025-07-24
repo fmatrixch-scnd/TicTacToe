@@ -65,9 +65,10 @@ public:
 			return LOSE;
 		}
 		else if (moves >= 9) {
-			cout << "Tie board, yinz both stuck." << endl;
+			cout << "Tie board, y'all both stuck." << endl;
 			return TIE;
 		}
+		return NORMAL;
 	}
 
 	PlayerStatus game() {
@@ -104,7 +105,7 @@ public:
 				cout << endl;
 			}
 			result = judge(chequerboard, move_count);
-			if (result == WIN or result == TIE) {
+			if (result != NORMAL) {
 				return result;
 			}
 			cout << "Select your place (opposite, 1-9): ";
@@ -118,6 +119,9 @@ public:
 				}
 			}
 			result = judge(chequerboard, move_count);
+			if (result != NORMAL) {
+				return result;
+			}
 		}
 		return result;
 	}
