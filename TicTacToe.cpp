@@ -124,22 +124,24 @@ public:
 
 	int fun() {
 		cout << "TicTacToe" << endl;
-		JUD:if (stm == BEGIN) {
-			int wing = lead();
-			if (wing >= 2) {
-				stm = ABS_WIN;
-				goto JUD;
+		while (true) {
+			if (stm == BEGIN) {
+				int wing = lead();
+				if (wing >= 2) {
+					stm = ABS_WIN;
+				}
+				else {
+					stm = ABS_LOSE;
+				}
 			}
-			else {
-				stm = ABS_LOSE;
-				goto JUD;
+			else if (stm == ABS_WIN) {
+				cout << "You absolutely won!" << endl;
+				return 0;
 			}
-		}
-		else if (stm == ABS_WIN) {
-			cout << "You absolutely won!" << endl;
-		}
-		else if (stm == ABS_LOSE) {
-			cout << "Have fun next time!" << endl;
+			else if (stm == ABS_LOSE) {
+				cout << "Have fun next time!" << endl;
+				return 0;
+			}
 		}
 		return 0;
 	}
