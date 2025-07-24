@@ -65,7 +65,7 @@ public:
 			return LOSE;
 		}
 		else if (moves >= 9) {
-			cout << "Tie board, y'all both stuck." << endl;
+			cout << "Tie board, yinz both stuck." << endl;
 			return TIE;
 		}
 		return NORMAL;
