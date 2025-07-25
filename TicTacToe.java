@@ -110,7 +110,7 @@ public class TicTacToe {
             return start();
         }
         else {
-            System.out.println("You haven't chose a role yet!");
+            System.out.println("You haven't chosen a role yet!");
             return -1;
         }
     }

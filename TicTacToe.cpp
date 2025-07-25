@@ -174,7 +174,7 @@ public:
 			return start();
 		}
 		else {
-			cout << "You haven't chose a role yet!" << endl;
+			cout << "You haven't chosen a role yet!" << endl;
 			return -1;
 		}
 	}
